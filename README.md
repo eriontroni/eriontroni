@@ -21,5 +21,5 @@ Docker, Nginx, Linux, Cloudflare Tunnel, Git
 **Contact**
 
 - Site: https://erion.troni.dev
-- LinkedIn: https://linkedin.com/in/YOUR-LINKEDIN
+- LinkedIn: https://linkedin.com/in/eriontroni
 - Email: eriontroni@gmail.com
