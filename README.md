@@ -4,6 +4,8 @@
 
 Most of my time goes into APIs and the infrastructure around them, but I build the frontends too. Lately that means Clean Architecture in .NET 10, SQL Server, Docker Compose, and getting things online from a laptop running Ubuntu Server in my room.
 
+> Most of my code lives on **[GitLab](https://gitlab.com/eriontroni)**. I use it mainly for the runners and CI/CD pipelines.
+
 <p>
   <img src="https://skillicons.dev/icons?i=cs,dotnet,react,ts,vite,docker,nginx,linux,ubuntu,redis,cloudflare,git" alt="C#, .NET, React, TypeScript, Vite, Docker, Nginx, Linux, Ubuntu, Redis, Cloudflare, Git" />
 </p>
@@ -31,7 +33,7 @@ flowchart LR
     subgraph App["Në Kohë"]
         API[Backend API]
         DB[(Database)]
-        WA[WABA<br/>WhatsApp]
+        WA[OpenWa<br/>WhatsApp]
         SMS[SMS fallback]
     end
 
@@ -67,5 +69,6 @@ The RAM constraint is annoying, but it forces you to actually understand what ea
 ## Contact
 
 - Site: [erion.troni.dev](https://erion.troni.dev)
+- GitLab: [gitlab.com/eriontroni](https://gitlab.com/eriontroni)
 - LinkedIn: [linkedin.com/in/eriontroni](https://linkedin.com/in/eriontroni)
 - Email: [eriontroni@gmail.com](mailto:eriontroni@gmail.com)
