@@ -1,25 +1,71 @@
-## Erion Troni
+# Erion Troni
 
-Backend developer, mostly .NET. Software engineering student in Kosovo.
+**Full-stack developer, backend-heavy.** .NET on the server, React + TypeScript on the front. Software engineering student in Kosovo.
 
-I work on APIs and the infrastructure around them. Lately that means Clean Architecture in .NET 10, SQL Server, Docker Compose, and getting things online from a laptop running Ubuntu Server in my room.
+Most of my time goes into APIs and the infrastructure around them, but I build the frontends too. Lately that means Clean Architecture in .NET 10, SQL Server, Docker Compose, and getting things online from a laptop running Ubuntu Server in my room.
 
-**Working on**
+<p>
+  <img src="https://skillicons.dev/icons?i=cs,dotnet,react,ts,vite,docker,nginx,linux,ubuntu,redis,cloudflare,git" alt="C#, .NET, React, TypeScript, Vite, Docker, Nginx, Linux, Ubuntu, Redis, Cloudflare, Git" />
+</p>
 
-`eTermini` - appointment system for healthcare. Two .NET APIs (public and admin) on a shared database, two React frontends, all running as one Compose stack behind a Cloudflare Tunnel. No open ports, no port forwarding fights with my ISP.
+---
 
-**Homelab**
+## Working on
 
-Old laptop, Ubuntu Server, 3 GB of RAM. Everything containerized, memory limits set per service, health checks, Nginx in front of the static builds. The RAM constraint is annoying but it forces you to actually understand what each process is doing.
+### [Në Kohë](https://ne-kohe.com) · *in progress*
 
-**Stack**
+Online booking for service businesses (barbershops, salons, dental clinics, nail studios) in Kosovo, Albania and North Macedonia.
 
-C#, .NET, ASP.NET Core, EF Core, SQL Server, Redis
-React, TypeScript, Vite
-Docker, Nginx, Linux, Cloudflare Tunnel, Git
+- Clients book from a branded page (`name.ne-kohe.com`): pick a service, a staff member and a free slot. No account needed
+- Confirmations go out over WhatsApp (OpenWa), with SMS fallback. Unconfirmed slots are released after 30 minutes
+- Staff get a phone panel with their daily timeline, push notifications and walk-in booking
+- Owners get a dashboard with KPIs and charts, plus staff, services, working hours and branding
+- Real-time sync across the client, staff and owner views
 
-**Contact**
+```mermaid
+flowchart LR
+    C([Client<br/>name.ne-kohe.com])
+    S([Staff<br/>phone panel])
+    O([Owner<br/>dashboard])
 
-- Site: https://erion.troni.dev
-- LinkedIn: https://linkedin.com/in/eriontroni
-- Email: eriontroni@gmail.com
+    subgraph App["Në Kohë"]
+        API[Backend API]
+        DB[(Database)]
+        WA[WABA<br/>WhatsApp]
+        SMS[SMS fallback]
+    end
+
+    C -->|books a slot| API
+    API --> DB
+    API --> WA
+    API -.-> SMS
+    WA -->|confirmation link| C
+    SMS -.-> C
+    API <-->|real-time + push| S
+    API <-->|real-time| O
+```
+
+## Homelab
+
+An old laptop running Ubuntu Server with 3 GB of RAM.
+
+- Everything containerized
+- Memory limits set per service
+- Health checks on every container
+- Nginx in front of the static builds
+
+The RAM constraint is annoying, but it forces you to actually understand what each process is doing.
+
+## Stack
+
+| Area | Tools |
+| --- | --- |
+| **Backend** | C# · .NET · ASP.NET Core · EF Core · SQL Server · Redis |
+| **Frontend** | React · TypeScript · Vite |
+| **Infra** | Docker · Nginx · Linux · Cloudflare Tunnel · Git |
+
+## Contact
+
+- Site: [erion.troni.dev](https://erion.troni.dev)
+- LinkedIn: [linkedin.com/in/eriontroni](https://linkedin.com/in/eriontroni)
+- Email: [eriontroni@gmail.com](mailto:eriontroni@gmail.com)
