@@ -12,7 +12,7 @@ Most of my time goes into APIs and the infrastructure around them, but I build t
 
 ## Working on
 
-### [Në Kohë](https://ne-kohe.com) · *in progress*
+### [Në Kohë](https://ne-kohe.com) · *in production*
 
 Online booking for service businesses (barbershops, salons, dental clinics, nail studios) in Kosovo, Albania and North Macedonia.
 
